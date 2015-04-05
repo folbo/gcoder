@@ -1,0 +1,34 @@
+1. Program assumptions
+Application Gcoder is for displaying CNC tool path from the file. In addition this application allows for adding new instructions and saving the file.
+Only movements G00 and G01 (straight lines) for XY plane are implemented.
+
+2. Manual
+-Working on files
+For opening file with G-Codes click on "Open File" button and select file. The file will be loaded, analysed and displayed on the screen.
+To save the file click on "Save File" button and write down name for output file.
+
+-Moving through loaded instructions
+On the left side loaded file is listed. By default, selected instruction is the last line of the file. You can select another instruction to check where is tool and what movement did he do from the start.
+Buttons "Next" and "Previous" allows you to move through nearby instructions.
+Button "Reset" returns to first instruction.
+Button "Run" runs the simulations. Simulation starts from selected instruction.
+Button "Adjust Size" scales and sets drawing in comfortable position by adjusting drawing size and position to actual display screen.
+
+-Application modes
+- Preview mode
+  In this mode you can zoom or move the drawing and simulate tool movement.
+- Edit mode
+  In this mode you can add G-Codes clicking on the plane. New instruction with proper parameters will be added to the list on the left side. Dragging drawing in this mode is not possible.
+  W tym trybie można dodawać G-Cody klikając na płaszczyznę. Instrukcja zostanie dodana do listy 
+
+-Drawing preview
+Drawing of paths has been implemented as vector drawing. Application allows zooming and moving drawing on the screen.
+For zoom - scroll your mouse.
+For move - click on drawing and drag your mouse.
+
+3. Tests
+App was tested with following input files:
+too big file.nc - too many instructions inside file
+too big image.nc - coordinates inside file exceed program limits
+empty.nc - empty file
+circle.nc, file1.nc - valid files
